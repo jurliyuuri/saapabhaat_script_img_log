@@ -54,5 +54,11 @@ for /l %%x in (1, 1, 22) do (
     magick %%x.png -fill black +opaque #ffaec9 a\%%x桃.png
 )
 </pre>
+
+<p>これをtrimして、</p>
+
+<pre>
+for /r %%i in (*.png) do magick %%i -trim %%i
+</pre>
 </body>
 </html>
