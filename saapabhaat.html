@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<title>ザーパバートのグリフ</title>
+<meta charset="UTF-8">
+</head>
+<body class="cool">
+<a href="./index.html">トップに戻る</a>
+<h1>ザーパバートのグリフ</h1>
+
+
+<p>予め用意しておいたグリフ一覧がこちら。</p>
+
+<img src="huskwise/huskwise.png" width="1000">
+
+<p>これを手動で切り分け、</p>
+
+<img src="huskwise/1.png" height="300">
+<img src="huskwise/2.png" height="300">
+<img src="huskwise/3.png" height="300">
+<img src="huskwise/4.png" height="300">
+<img src="huskwise/5.png" height="300">
+<img src="huskwise/6.png" height="300">
+<img src="huskwise/7.png" height="300">
+<img src="huskwise/8.png" height="300">
+<img src="huskwise/9.png" height="300">
+<img src="huskwise/10.png" height="300">
+<img src="huskwise/11.png" height="300">
+<img src="huskwise/12.png" height="300">
+<img src="huskwise/13.png" height="300">
+<img src="huskwise/14.png" height="300">
+<img src="huskwise/15.png" height="300">
+<img src="huskwise/16.png" height="300">
+<img src="huskwise/17.png" height="300">
+<img src="huskwise/18.png" height="300">
+<img src="huskwise/19.png" height="300">
+<img src="huskwise/20.png" height="300">
+<img src="huskwise/21.png" height="300">
+<img src="huskwise/22.png" height="300">
+
+<p>これをimagemagickで分解する。</p>
+
+<pre>
+for /l %%x in (1, 1, 22) do (
+    magick %%x.png -fill black +opaque #ff00f2 a\%%xマ.png
+    magick %%x.png -fill black +opaque #ed1c24 a\%%x赤.png
+    magick %%x.png -fill black +opaque #ff7f27 a\%%x橙.png
+    magick %%x.png -fill black +opaque #fff200 a\%%x黄.png
+    magick %%x.png -fill black +opaque #22b14c a\%%x緑.png
+    magick %%x.png -fill black +opaque #00a2e8 a\%%x水.png
+    magick %%x.png -fill black +opaque #3f48cc a\%%x青.png
+    magick %%x.png -fill black +opaque #a349a4 a\%%x紫.png
+    magick %%x.png -fill black +opaque #880015 a\%%x茶.png
+    magick %%x.png -fill black +opaque #ffaec9 a\%%x桃.png
+)
+</pre>
+</body>
+</html>
